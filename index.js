@@ -51,4 +51,6 @@ for (var i = 0; i < numOfButtons; i++) {
 
     });
 }
-
+document.addEventListener("keydown", function(key,code){
+            console.log(event);
+});
