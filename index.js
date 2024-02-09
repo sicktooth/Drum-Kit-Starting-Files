@@ -6,12 +6,16 @@ for (var i = 0; i < numOfButtons; i++) {
         var buttonText = this.textContent;
         makeSound(buttonText);
 
+        buttonAnimation(buttonText);
+
     });
 }
 document.addEventListener("keydown", function(event){
     
     var keypress = event.key;
     makeSound(keypress);
+
+    buttonAnimation(keypress);
 
 });
 
@@ -57,5 +61,10 @@ function makeSound(key) {
             console.log(key);
         break;
     }
-    
+
+}
+
+function buttonAnimation(currentKey) {
+    var activeBUtton = document.querySelector("." + currentKey);
+    activeBUtton.classList.add("pressed");
 }
