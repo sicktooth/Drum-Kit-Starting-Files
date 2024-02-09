@@ -65,6 +65,10 @@ function makeSound(key) {
 }
 
 function buttonAnimation(currentKey) {
-    var activeBUtton = document.querySelector("." + currentKey);
-    activeBUtton.classList.add("pressed");
+    var activeButton = document.querySelector("." + currentKey);
+    activeButton.classList.add("pressed");
+
+    setTimeout(function () {
+        activeButton.classList.remove("pressed");
+    }, 100);
 }
